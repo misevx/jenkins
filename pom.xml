@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion> 4.0.0 </modelVersion>
+	<properties>
+		<maven.compiler.source> 15 </maven.compiler.source>
+		<maven.compiler.target> 15 </maven.compiler.target>
+		<maven.surefire.plugin> 3.0.0-M5 </maven.surefire.plugin>
+		<maven.jar.plugin> 3.2.0 </maven.jar.plugin>
+		<project.build.sourceEncoding> UTF-8 </project.build.sourceEncoding>
+		<junit.platform.runner> 1.7.2 </junit.platform.runner>
+		<junit.jupiter> 5.7.2 </junit.jupiter>
+		<junit.jupiter.engine> 5.7.2 </junit.jupiter.engine>
+	</properties>
+
+	<groupId> net.korax </groupId>
+	<artifactId> Test </artifactId>
+	<version> 0.0.1-SNAPSHOT </version>
+	<packaging> jar </packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId> org.junit.jupiter </groupId>
+			<artifactId> junit-jupiter </artifactId>
+			<version> ${junit.jupiter} </version>
+			<scope> test </scope>
+		</dependency>
+		<!--
+		<dependency>
+			<groupId> org.junit.jupiter </groupId>
+			<artifactId> junit-jupiter-engine </artifactId>
+			<version> ${junit.jupiter.engine} </version>
+			<scope> test </scope>
+		</dependency>
+		<dependency>
+			<groupId> org.junit.jupiter </groupId>
+			<artifactId> junit-jupiter-api </artifactId>
+			<version> ${junit.jupiter} </version>
+			<scope> test </scope>
+		</dependency>
+		<dependency>
+			<groupId> org.junit.platform </groupId>
+			<artifactId> junit-platform-runner </artifactId>
+			<version> ${junit.platform.runner} </version>
+			<scope> test </scope>
+		</dependency>
+		-->
+	</dependencies>
+
+	<build>
+		<finalName> factorial </finalName>
+		<plugins>
+			<plugin>
+				<artifactId> maven-surefire-plugin </artifactId>
+				<version> ${maven.surefire.plugin} </version>
+			</plugin>
+			<!--
+			<plugin>
+				<groupId> org.apache.maven.plugins </groupId>
+				<artifactId> maven-jar-plugin </artifactId>
+				<version> ${maven.jar.plugin} </version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass> net.korax.Main </mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			-->
+		</plugins>
+	</build>
+</project>
